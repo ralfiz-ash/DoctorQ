@@ -22,10 +22,26 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerDoctorFragment"
+            app:destination="@id/registerDoctorFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.doctorq.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/registerDoctorFragment"
+        android:name="com.example.doctorq.admin.RegisterDoctorFragment"
+        android:label="fragment_register_doctor"
+        tools:layout="@layout/fragment_register_doctor" />
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.example.doctorq.user.UserHomeFragment"
+        android:label="fragment_user_home"
+        tools:layout="@layout/fragment_user_home" />
 </navigation>

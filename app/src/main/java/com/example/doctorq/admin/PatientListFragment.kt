@@ -1,4 +1,4 @@
-package com.example.doctorq
+package com.example.doctorq.admin
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
-import com.example.doctorq.databinding.FragmentRegisterBinding
+import com.example.doctorq.R
+import com.example.doctorq.databinding.FragmentPatientListBinding
 
-class RegisterFragment : Fragment() {
-    private lateinit var binding: FragmentRegisterBinding
+
+class PatientListFragment : Fragment() {
+    private lateinit var binding:FragmentPatientListBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +22,13 @@ class RegisterFragment : Fragment() {
                 findNavController().navigateUp()
             }
         })
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding=FragmentRegisterBinding.inflate(layoutInflater,container,false)
+        binding=FragmentPatientListBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
@@ -36,4 +36,5 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
 }

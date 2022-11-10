@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingVertical="100dp"
+        android:clipToOutline="true"
+        android:elevation="1dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/book1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="8dp"
+       >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"/>
+          <!--  <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="demoooo"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+             />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv1"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mainCard"
+        app:layout_constraintBottom_toBottomOf="@id/mainCard"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv3"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/mainCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mainCard"
+        app:layout_constraintWidth_percent="0.4"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>

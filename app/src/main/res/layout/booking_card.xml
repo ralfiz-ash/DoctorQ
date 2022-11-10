@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="@drawable/container">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@color/white_down"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Dr XXXXX "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPatientHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Patient Info "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvDr" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="-------------"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintEnd_toEndOf="@id/tvPatientHead"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="@id/tvPatientHead" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Token"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:fontFamily="@font/cairo_bold"
+        android:text="2"
+        android:textColor="@color/peak"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelToken"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toEndOf="@id/labelToken"
+        app:layout_constraintTop_toTopOf="@+id/labelToken" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="Patient Namezzzzzz"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvLine" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPatientPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="9567563300"
+        android:autoLink="phone"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientName" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPatientAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="Address of person\nPost number,House number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientPhone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBookingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="Booking to 12/11/2022"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvPatientAddress" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBookingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="Time 10:00 am"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookingDate" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBookingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="Online"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookingTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

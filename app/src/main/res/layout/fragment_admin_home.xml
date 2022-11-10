@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/peak"
+    tools:context=".admin.AdminHomeFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round"
+        android:elevation="16dp"
+        android:src="@drawable/add"
+        android:padding="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/v2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Add Dr"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintStart_toStartOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round"
+        android:src="@drawable/list"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@id/v1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Dr List"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v2"
+        app:layout_constraintStart_toStartOf="@+id/v2"
+        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round"
+        android:src="@drawable/patients"
+        android:padding="30dp"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintStart_toStartOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Patients"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v3"
+        app:layout_constraintStart_toStartOf="@+id/v3"
+        app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round"
+        android:elevation="16dp"
+        android:src="@drawable/feedback"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v3"
+        app:layout_constraintStart_toStartOf="@+id/v2"
+        app:layout_constraintTop_toTopOf="@+id/v3" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Feedback"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v4"
+        app:layout_constraintStart_toStartOf="@+id/v4"
+        app:layout_constraintTop_toBottomOf="@+id/v4" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round"
+        android:elevation="16dp"
+        android:src="@drawable/feedback"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/v3"
+        app:layout_constraintStart_toStartOf="@+id/v3"
+        app:layout_constraintTop_toBottomOf="@+id/tv3" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Bookings"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v5"
+        app:layout_constraintStart_toStartOf="@+id/v5"
+        app:layout_constraintTop_toBottomOf="@+id/v5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/v6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round"
+        android:elevation="16dp"
+        android:src="@drawable/feedback"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/v4"
+        app:layout_constraintStart_toStartOf="@+id/v4"
+        app:layout_constraintTop_toTopOf="@+id/v5" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jotia_regular"
+        android:text="Bookings"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/v6"
+        app:layout_constraintStart_toStartOf="@+id/v6"
+        app:layout_constraintTop_toBottomOf="@+id/v6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

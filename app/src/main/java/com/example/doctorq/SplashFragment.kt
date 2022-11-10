@@ -35,7 +35,7 @@ class SplashFragment : Fragment() {
                     findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
                 }
             }
-            postDelayed(runnable, 3000)
+            postDelayed(runnable, 6000)
         }
 
     }

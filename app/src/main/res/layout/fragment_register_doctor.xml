@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".admin.RegisterDoctorFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Doctor Registration"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CameraContainer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/white_down"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="@id/image"
+                app:layout_constraintEnd_toEndOf="@id/image">
+
+                <ImageView
+                    android:id="@+id/cameraImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/camera" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Doctor Id"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/image"
+                app:layout_constraintEnd_toEndOf="@+id/etDocName"
+                app:layout_constraintStart_toEndOf="@+id/image" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Doctor Name"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocId" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocAge"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Doctor Age"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocName" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocDob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Date of birth"
+                android:focusable="false"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/etDocName"
+                app:layout_constraintStart_toEndOf="@+id/etDocAge"
+                app:layout_constraintTop_toBottomOf="@id/etDocName" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Department"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocAge" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSpecialization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Specialization"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDepartment" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Experience in years"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSpecialization" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Mobile Number"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etExperience" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/Time"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Starting Time"
+                android:paddingVertical="10dp"
+                android:focusable="false"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocMobile" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/endTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:focusable="false"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="End time"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/etDocMobile"
+                app:layout_constraintStart_toEndOf="@id/Time"
+                app:layout_constraintTop_toBottomOf="@id/etDocMobile" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Available Days"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Time" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:text="Login Credentials"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocDays" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Doctor Username"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabel" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDocPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_field"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:hint="Doctor Password"
+                android:paddingVertical="10dp"
+                android:paddingStart="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocUsername" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRegister"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/jotia_bold"
+                android:gravity="center"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDocPassword" />
+
+
+           <!-- <EditText
+                android:id="@+id/etStudentdob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/curved"
+                android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+                android:focusable="false"
+                android:hint="@string/Tdob"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etstaddress" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_Gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/curved"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etStudentdob">
+
+                <RadioButton
+                    android:id="@+id/rbM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rbF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etstAdhar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/curved"
+                android:hint="Adhar Number"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup_Gender" />
+
+            <TextView
+                android:id="@+id/etAcademicHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Academic Info"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etstAdhar" />
+
+            <EditText
+                android:id="@+id/etstclass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/curved"
+                android:hint="Class"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAcademicHead" />
+
+            <TextView
+                android:id="@+id/tvMediumselector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Select Medium"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etstclass" />
+
+            <LinearLayout
+                android:id="@+id/llMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMediumselector">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <RadioButton
+                        android:id="@+id/rbMM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Malayalam" />
+
+                    <RadioButton
+                        android:id="@+id/rbEM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="English" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDivisionselector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Select Division"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llMedium" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollRadios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDivisionselector">
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_Division"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A" />
+
+                    <RadioButton
+                        android:id="@+id/rbB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B" />
+
+                    <RadioButton
+                        android:id="@+id/rbC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C" />
+
+                    <RadioButton
+                        android:id="@+id/rbD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="D" />
+
+                    <RadioButton
+                        android:id="@+id/rbE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="E" />
+
+                    <RadioButton
+                        android:id="@+id/rbFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F" />
+
+                    <RadioButton
+                        android:id="@+id/rbG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G" />
+
+                    <RadioButton
+                        android:id="@+id/rbHse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HSE" />
+
+                    <RadioButton
+                        android:id="@+id/rbUg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UG" />
+
+                    <RadioButton
+                        android:id="@+id/rbPg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PG" />
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_Add_student"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/app_btn"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center"
+                android:text="Add To Elegant Family"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollRadios" />
+-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
